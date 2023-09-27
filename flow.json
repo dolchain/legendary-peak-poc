@@ -1,0 +1,82 @@
+{
+	"contracts": {
+		"FungibleToken": {
+			"source": "cadence/contracts/standard/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6",
+				"mainnet": "f233dcee88fe0abe",
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"HelloWorld": "cadence/contracts/HelloWorld.cdc",
+		"MetadataViews": {
+			"source": "cadence/contracts/standard/MetaViews.cdc",
+			"aliases": {
+				"mainnet": "1d7e57aa55817448",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		},
+		"NonFungibleToken": {
+			"source": "cadence/contracts/standard/NonFungibleToken.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"mainnet": "1d7e57aa55817448",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		},
+		"TopShot": {
+			"source": "cadence/contracts/community/TopShot.cdc",
+			"aliases": {
+				"mainnet": "0b2a3299cc857e29",
+				"testnet": "877931736ee77cff"
+			}
+		},
+		"TopShotLocking": {
+			"source": "cadence/contracts/community/TopShotLocking.cdc",
+			"aliases": {
+				"mainnet": "0b2a3299cc857e29",
+				"testnet": "877931736ee77cff"
+			}
+		}
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"community": {
+			"address": "f669cb8d41ce0c74",
+			"key": "ba68d45a5acaa52f3cacf4ad3a64d9523e0ce0ae3addb1ee6805385b380b7646"
+		},
+		"default": {
+			"address": "045a1763c93006ca",
+			"key": "ba68d45a5acaa52f3cacf4ad3a64d9523e0ce0ae3addb1ee6805385b380b7646"
+		},
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": {
+				"type": "file",
+				"location": "./emulator.key"
+			}
+		},
+		"standard": {
+			"address": "192440c99cb17282",
+			"key": "ba68d45a5acaa52f3cacf4ad3a64d9523e0ce0ae3addb1ee6805385b380b7646"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"community": [
+				"TopShot",
+				"TopShotLocking"
+			],
+			"default": [
+				"HelloWorld"
+			],
+			"standard": [
+				"MetadataViews"
+			]
+		}
+	}
+}
